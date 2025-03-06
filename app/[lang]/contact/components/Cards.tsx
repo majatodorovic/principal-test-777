@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function Cards({ data }: any) {
   return (
-    <div className="flex flex-1 flex-col gap-12 sm:flex-row sm:gap-6 items-stretch">
+    <div className="items-stretch gap-12 sm:flex-row sm:gap-6 flex flex-1 flex-col">
       <div className="flex flex-1 flex-col gap-8 sm:gap-12">
         <p
           dangerouslySetInnerHTML={{ __html: data.wholesale.title }}
@@ -24,7 +24,7 @@ export default function Cards({ data }: any) {
               return (
                 <div
                   key={index}
-                  className="responsiveText flex w-full flex-1 flex-col gap-8 rounded-[32px] bg-blue px-6 py-6 text-white min-h-[180px] sm:min-h-[270px] h-full 2xl:rounded-[64px] 2xl:px-8 2xl:py-10"
+                  className="responsiveText flex 2xl:rounded-[64px] 2xl:px-8 2xl:py-10 h-full min-h-[180px] w-full flex-1 flex-col gap-8 rounded-[32px] bg-blue px-6 py-6 text-white sm:min-h-[270px]"
                 >
                   <p
                     dangerouslySetInnerHTML={{
@@ -83,7 +83,7 @@ export default function Cards({ data }: any) {
               return (
                 <div
                   key={index}
-                  className="responsiveText flex w-full flex-1 flex-col gap-8 rounded-[32px] bg-blue px-6 py-6 text-white min-h-[180px] sm:min-h-[270px] h-full 2xl:rounded-[64px] 2xl:px-8 2xl:py-10"
+                className="responsiveText flex 2xl:rounded-[64px] 2xl:px-8 2xl:py-10 h-full min-h-[180px] w-full flex-1 flex-col gap-8 rounded-[32px] bg-blue px-6 py-6 text-white sm:min-h-[270px]"
                 >
                   <p
                     dangerouslySetInnerHTML={{
@@ -121,7 +121,7 @@ export default function Cards({ data }: any) {
               );
             },
           )}
-          <div className="responsiveText flex w-full flex-1 flex-col gap-8 rounded-[32px] bg-blue px-6 py-6 text-white min-h-[180px] sm:min-h-[270px] h-full 2xl:rounded-[64px] 2xl:px-8 2xl:py-10">
+          <div   className="responsiveText flex 2xl:rounded-[64px] 2xl:px-8 2xl:py-10 h-full min-h-[180px] w-full flex-1 flex-col gap-8 rounded-[32px] bg-blue px-6 py-6 text-white sm:min-h-[270px]">
             <div className="flex items-center gap-6">
               <Image
                 src="/images/contact/paper.png"
