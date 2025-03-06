@@ -48,9 +48,9 @@ export default function Brand({ data, lang }: any) {
                 alt="Brand Logo"
                 width={200}
                 height={144}
-                className="absolute right-0 top-[-13px] z-10 translate-x-0 translate-y-40 transform rounded-xl w-[120px] sm:w-[130px]"
+                className="absolute right-0 top-[-13px] z-10 w-[120px] translate-x-0 translate-y-40 transform rounded-xl sm:w-[130px]"
               />
-          </div>
+            </div>
           </div>
         </div>
         {/* Layout for large screens */}
