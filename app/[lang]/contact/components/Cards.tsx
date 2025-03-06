@@ -83,7 +83,7 @@ export default function Cards({ data }: any) {
               return (
                 <div
                   key={index}
-                className="responsiveText flex h-full min-h-[180px] w-full flex-1 flex-col gap-8 rounded-[32px] bg-blue px-6 py-6 text-white sm:min-h-[270px] 2xl:rounded-[64px] 2xl:px-8 2xl:py-10"
+                  className="responsiveText flex h-full min-h-[180px] w-full flex-1 flex-col gap-8 rounded-[32px] bg-blue px-6 py-6 text-white sm:min-h-[270px] 2xl:rounded-[64px] 2xl:px-8 2xl:py-10"
                 >
                   <p
                     dangerouslySetInnerHTML={{
@@ -121,7 +121,7 @@ export default function Cards({ data }: any) {
               );
             },
           )}
-          <div   className="responsiveText flex h-full min-h-[180px] w-full flex-1 flex-col gap-8 rounded-[32px] bg-blue px-6 py-6 text-white sm:min-h-[270px] 2xl:rounded-[64px] 2xl:px-8 2xl:py-10">
+          <div className="responsiveText flex h-full min-h-[180px] w-full flex-1 flex-col gap-8 rounded-[32px] bg-blue px-6 py-6 text-white sm:min-h-[270px] 2xl:rounded-[64px] 2xl:px-8 2xl:py-10">
             <div className="flex items-center gap-6">
               <Image
                 src="/images/contact/paper.png"
