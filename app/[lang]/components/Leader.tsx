@@ -74,14 +74,14 @@ export default function Leader({ data, lang }: any) {
               <div className="grid w-full grid-cols-1 overflow-hidden rounded-lg bg-white/20 sm:flex lg:rounded-2xl">
                 {data?.leader?.loyaltyCards?.map(
                   (card: { title: string; description: string }, index: number) => (
-                    <button 
+                        <button 
                     key={index}
-                    className={clsx(
-                      'flex-grow px-3 py-2 text-xs font-bold uppercase text-white transition duration-300 hover:bg-white hover:text-blue lg:py-3 2xl:text-base',
-                      {
+                        className={clsx(
+                          'flex-grow px-3 py-2 text-xs font-bold uppercase text-white transition duration-300 hover:bg-white hover:text-blue lg:py-3 2xl:text-base',
+                          {
                         '!bg-white !text-blue': loyaltyCardTitle === card.title,
-                      }
-                    )}
+                          }
+                        )}
                       onClick={() => {
                         setLoyaltyCardTitle(card.title);
                         setLoyaltyCardDescription(card.description);
@@ -89,8 +89,8 @@ export default function Leader({ data, lang }: any) {
                     >
                       {card.title}
                     </button>
-                  )
-                 )}
+                  ),
+                )}
               </div>
               <div className="responsiveText rounded-xl bg-white/20 px-6 py-4 text-white lg:rounded-3xl lg:px-12 lg:py-8">
                 {loyaltyCardDescription}
@@ -117,7 +117,7 @@ export default function Leader({ data, lang }: any) {
               }}
               navigation={{
                 prevEl: '.swiper-button-prev', // Strelica za prethodni
-                nextEl: '.swiper-button-next',  // Strelica za sledeći
+              nextEl: '.swiper-button-next',  // Strelica za sledeći
               }}
               onSwiper={(swiper) => {
                 swiperRef.current = swiper;
@@ -175,7 +175,7 @@ export default function Leader({ data, lang }: any) {
                       </div>
                     </SwiperSlide>
                   );
-                 }
+                }
               )}
             </Swiper>
 
@@ -221,7 +221,6 @@ export default function Leader({ data, lang }: any) {
               >
                 {data.leader.aboutUsButton}
               </Link>
-
             </div>
           </div>
 
@@ -256,13 +255,13 @@ export default function Leader({ data, lang }: any) {
                   >
                     <div className="grid grid-cols-2 gap-6 md:gap-4 xl:grid-cols-1 xl:gap-[5px]">
                     {[
-                      card,
-                        data.leader.numberCards[index + 1],
-                        data.leader.numberCards[index + 2],
+                          card,
+                            data.leader.numberCards[index + 1],
+                            data.leader.numberCards[index + 2],
                         data.leader.numberCards[index + 3]
                     ].map((item, i) =>
-                      item ? (
-                          <div key={i} className="flex flex-col items-center text-center">
+                          item ? (
+                              <div key={i} className="flex flex-col items-center text-center">
                             <Image
                               src={item.icon}
                               alt={item.text}
@@ -288,7 +287,7 @@ export default function Leader({ data, lang }: any) {
                                     separator=""
                                   />
                                   )}
-                              </InView>
+                          </InView>
                             </div>
                               <p className="mt-2 text-xs text-white lg:text-base">{item.text}</p>
                           </div>
@@ -322,10 +321,10 @@ export default function Leader({ data, lang }: any) {
                 height={24}
                 className="blackFilter h-5 w-5 -rotate-90 lg:h-7 lg:w-7"
               />
-                </button>
+        </button>
           </div>
         </div>
       </div>
     </section>
   );
-}  
+}
