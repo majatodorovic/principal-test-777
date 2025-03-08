@@ -13,10 +13,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 export default function Leader({ data, lang }: any) {
   const [loyaltyCardTitle, setLoyaltyCardTitle] = useState(
-     data.leader.loyaltyCards[0].title
+  data.leader.loyaltyCards[0].title
   );
   const [loyaltyCardDescription, setLoyaltyCardDescription] = useState(
-     data.leader.loyaltyCards[0].description
+  data.leader.loyaltyCards[0].description
   );
   const [startCount, setStartCount] = useState(false);
   const swiperRef = useRef<any>(null);
@@ -26,7 +26,7 @@ export default function Leader({ data, lang }: any) {
 
     // Logovanje swiper instanci za debug
     if (swiperRef.current) {
-      console.log("Swiper instance:", swiperRef.current);
+      console.log('Swiper instance:', swiperRef.current);
     }
   }, []);
 
@@ -74,14 +74,14 @@ export default function Leader({ data, lang }: any) {
               <div className="grid w-full grid-cols-1 overflow-hidden rounded-lg bg-white/20 sm:flex lg:rounded-2xl">
                 {data?.leader?.loyaltyCards?.map(
                   (card: { title: string; description: string }, index: number) => (
-                        <button 
-                    key={index}
-                        className={clsx(
-                          'flex-grow px-3 py-2 text-xs font-bold uppercase text-white transition duration-300 hover:bg-white hover:text-blue lg:py-3 2xl:text-base',
-                          {
-                        '!bg-white !text-blue': loyaltyCardTitle === card.title,
-                          }
-                        )}
+                  <button
+                          key={index}
+                  className={clsx(
+                    'flex-grow px-3 py-2 text-xs font-bold uppercase text-white transition duration-300 hover:bg-white hover:text-blue lg:py-3 2xl:text-base',
+                        {
+                          '!bg-white !text-blue': loyaltyCardTitle === card.title,
+                        }
+                  )}
                       onClick={() => {
                         setLoyaltyCardTitle(card.title);
                         setLoyaltyCardDescription(card.description);
@@ -117,11 +117,11 @@ export default function Leader({ data, lang }: any) {
               }}
               navigation={{
                 prevEl: '.swiper-button-prev', // Strelica za prethodni
-              nextEl: '.swiper-button-next',  // Strelica za sledeći
+                    nextEl: '.swiper-button-next',  // Strelica za sledeći
               }}
               onSwiper={(swiper) => {
                 swiperRef.current = swiper;
-                console.log("Swiper instance onSwiper desktop: ",
+                  console.log("Swiper instance onSwiper desktop: ",
                 swiperRef.current);
               }}
             >
@@ -175,7 +175,7 @@ export default function Leader({ data, lang }: any) {
                       </div>
                     </SwiperSlide>
                   );
-                }
+                },
               )}
             </Swiper>
 
@@ -243,8 +243,8 @@ export default function Leader({ data, lang }: any) {
               }}
               onSwiper={(swiper) => {
                 swiperRef.current = swiper;
-                console.log("Swiper instance onSwiper mobile: ", 
-                swiperRef.current);
+                console.log("Swiper instance onSwiper mobile: ",
+                  swiperRef.current);
               }}
             >
               {data.leader.numberCards.map((card: any, index: number) =>
@@ -254,14 +254,14 @@ export default function Leader({ data, lang }: any) {
                     className="!h-auto rounded-xl bg-white/20 px-6 py-6 lg:rounded-3xl lg:px-8 lg:py-8"
                   >
                     <div className="grid grid-cols-2 gap-6 md:gap-4 xl:grid-cols-1 xl:gap-[5px]">
-                    {[
+                        {[
                           card,
                             data.leader.numberCards[index + 1],
-                            data.leader.numberCards[index + 2],
-                        data.leader.numberCards[index + 3]
-                    ].map((item, i) =>
-                          item ? (
-                              <div key={i} className="flex flex-col items-center text-center">
+                          data.leader.numberCards[index + 2],
+                        data.leader.numberCards[index + 3],
+                        ].map((item, i) =>
+                   item ? (
+                          <div key={i} className="flex flex-col items-center text-center">
                             <Image
                               src={item.icon}
                               alt={item.text}
@@ -286,16 +286,16 @@ export default function Leader({ data, lang }: any) {
                                     duration={3}
                                     separator=""
                                   />
-                                  )}
-                          </InView>
+                            )}
+                                  </InView>
                             </div>
-                              <p className="mt-2 text-xs text-white lg:text-base">{item.text}</p>
+                            <p className="mt-2 text-xs text-white lg:text-base">{item.text}</p>
                           </div>
-                        ) : null
+                        ) : null,
                       )}
                     </div>
                   </SwiperSlide>
-                ) : null
+                ) : null,
               )}
             </Swiper>
             <button
@@ -321,10 +321,9 @@ export default function Leader({ data, lang }: any) {
                 height={24}
                 className="blackFilter h-5 w-5 -rotate-90 lg:h-7 lg:w-7"
               />
-        </button>
+                </button>
           </div>
         </div>
       </div>
     </section>
-  );
-}
+  );}
