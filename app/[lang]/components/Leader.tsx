@@ -334,7 +334,7 @@ export default function Leader({ data, lang }: any) {
                 height={24}
                 className="blackFilter h-5 w-5 -rotate-90 lg:h-7 lg:w-7"
               />
-            </button>
+                    </button>
           </div>
         </div>
       </div>
