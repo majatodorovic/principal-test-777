@@ -338,6 +338,6 @@ export default function Leader({ data, lang }: any) {
           </div>
         </div>
       </div>
-    </section>
+        </section>
   );
 }
